@@ -4,27 +4,30 @@ import Card from './Card'
 function App() {
   const item1 = {
     nome: 'Rick Sanchez',
-    foto: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg' 
+    foto: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
   }
 
-    const item2 = {
+  const item2 = {
     nome: 'Morty Smith',
-    foto: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg' 
+    foto: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
   }
 
-    const item3 = {
+  const item3 = {
     nome: 'Summer Smith',
-    foto: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg' 
+    foto: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg'
   }
 
   const personagens = [item1, item2, item3]
 
   return (
-    <>{
-      personagens.map(function(umPersonagem){
-        return <Card info={umPersonagem} />
-      })
-      }
+    <>
+      <div className='lista'>
+        {
+          personagens.map(function (umPersonagem) {
+            return <Card info={umPersonagem} />
+          })
+        }
+      </div>
     </>
   )
 }
